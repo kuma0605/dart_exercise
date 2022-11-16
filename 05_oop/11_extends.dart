@@ -1,27 +1,13 @@
+import 'lib/Father.dart';
+import 'lib/Son.dart';
 
-class Father{
-  String name = '刘备';
-  num money = 10000;
-
-  say(){
-    print('I am $name');
-  }
-}
-
-class Son extends Father{
-  @override
-  say(){
-    print('I am 刘禅');
-  }
-
-}
-
-void main(List<String> args) {
-  var f = new Father();
+void main() {
+  var f = new Father('皇帝');
   print(f.name);
 
-  var s = new Son();
+  var s = new Son.origin('法师');
   print(s.name);
-  print(s.money);
-  print(s.say());
+  // print(s.money); //子类不能访问父类中的私有内容
+  print(s.getMoney);
+  s.say();
 }
