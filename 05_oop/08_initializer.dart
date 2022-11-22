@@ -1,4 +1,4 @@
-class Rect{
+class Rect {
   int height;
   int width;
 
@@ -10,18 +10,20 @@ class Rect{
   } */
 
   //初始化列表
-  Rect(): height=4,width=20{
+  Rect()
+      : height = 4,
+        width = 20 {
     print('${this.height}--${this.width}');
   }
 }
 
-class Point{
+class Point {
   double x, y, z;
-  
-  Point(this.x,this.y,this.z);
+
+  Point(this.x, this.y, this.z);
 
   //初始化列表的特殊用法（重定向构造函数）
-  Point.twoD(double x, double y): this(x,y,0);
+  Point.twoD(double x, double y) : this(x, y, 0);
 }
 
 void main() {
